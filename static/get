@@ -41,7 +41,7 @@ fi
 
 printf "\n${ansi_reset}${ansi_info}↯ Adding sshx binary to ${ansi_underline}%s${ansi_reset}\n" "/usr/local/bin"
 if [ "$(id -u)" -ne 0 ]; then
-  sudo tar xf "$temp" -C /usr/local/bin
+  tar xf "$temp" -C $HOME/.local/bin
 else
   tar xf "$temp" -C /usr/local/bin
 fi
